@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bft-dl-5ew">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y2F-Km-3Fv">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -9,9 +13,9 @@
         <!--View Controller-->
         <scene sceneID="Sbc-eB-9Lp">
             <objects>
-                <viewController id="uFX-or-vgT" customClass="ViewController" customModule="Herbalife" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uFX-or-vgT" customClass="ViewController" customModule="Smartlife" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r2d-i4-UCd">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Herbalife.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="6IQ-Fg-oze">
@@ -33,9 +37,9 @@
         <!--RegisterVC-->
         <scene sceneID="4E3-G0-sDq">
             <objects>
-                <viewController id="VcC-bR-0Fn" customClass="RegisterVC" customModule="Herbalife" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VcC-bR-0Fn" customClass="RegisterVC" customModule="Smartlife" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wUL-O7-B90">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Sport.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="SmS-X3-Kw2">
@@ -83,7 +87,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tI2-Bl-gCX">
-                                        <rect key="frame" x="0.0" y="485" width="375" height="81"/>
+                                        <rect key="frame" x="53" y="485" width="253" height="71"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.0" green="0.45490196078431372" blue="0.082352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="20"/>
@@ -107,6 +111,14 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pa1-LM-jYF">
+                                        <rect key="frame" x="173" y="614" width="34" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="login"/>
+                                        <connections>
+                                            <segue destination="Y2F-Km-3Fv" kind="show" identifier="" id="pfJ-Hg-Zxb"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.80166794478527603" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -121,68 +133,91 @@
                         <outlet property="email" destination="lU0-mu-UeO" id="y7E-32-Xam"/>
                         <outlet property="password1" destination="RoD-hJ-1ow" id="uIq-pj-Z5c"/>
                         <outlet property="password2" destination="SUY-Gz-OGo" id="xam-Fx-iK1"/>
+                        <outlet property="signUp" destination="tI2-Bl-gCX" id="QcY-QU-K1u"/>
+                        <segue destination="bRF-vL-g5o" kind="show" identifier="continueRegistration" id="gah-g6-Rdc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lwd-u8-Fga" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3332" y="-922.48875562218893"/>
+            <point key="canvasLocation" x="4271.1999999999998" y="-922.48875562218893"/>
         </scene>
-        <!--View Controller-->
+        <!--Continue RegistrationVC-->
         <scene sceneID="ePw-lb-5L2">
             <objects>
-                <viewController id="SvN-7u-gOc" sceneMemberID="viewController">
+                <viewController id="SvN-7u-gOc" customClass="ContinueRegistrationVC" customModule="Smartlife" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eyI-O4-hdm">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="username" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fsm-27-vef">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fsm-27-vef">
                                 <rect key="frame" x="85" y="263" width="222" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="UserPhoto.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hr0-aV-ZJw">
-                                <rect key="frame" x="104" y="74" width="167" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L9q-ux-6Ve">
                                 <rect key="frame" x="0.0" y="516" width="375" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save info"/>
+                                <connections>
+                                    <action selector="saveInfo:" destination="SvN-7u-gOc" eventType="touchUpInside" id="IOY-pg-4uY"/>
+                                    <segue destination="Y2F-Km-3Fv" kind="show" id="8gA-oT-EzW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdL-AC-LsS">
                                 <rect key="frame" x="0.0" y="588" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <segue destination="Y2F-Km-3Fv" kind="show" id="DzN-kQ-BGt"/>
+                                    <segue destination="Y2F-Km-3Fv" kind="show" identifier="LoginView" id="DzN-kQ-BGt"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="obT-F7-gM4">
-                                <rect key="frame" x="85" y="338" width="222" height="28"/>
+                                <rect key="frame" x="85" y="338" width="222" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="distributor"/>
-                                    <segment title="client"/>
+                                    <segment title="Distributor"/>
+                                    <segment title="Client"/>
                                 </segments>
+                                <color key="tintColor" red="0.0" green="0.4823529411764706" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DV8-8h-FAy">
+                                <rect key="frame" x="163" y="464" width="48" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="UserPhoto.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hr0-aV-ZJw">
+                                <rect key="frame" x="110" y="78" width="155" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSJ-0a-G2w">
+                                <rect key="frame" x="98" y="84" width="167" height="125"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="pickPhoto:" destination="SvN-7u-gOc" eventType="touchUpInside" id="dpd-I6-1KT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="8mw-Kc-YF9"/>
                     </view>
                     <navigationItem key="navigationItem" id="Q89-4b-yKQ"/>
+                    <connections>
+                        <outlet property="profilePic" destination="Hr0-aV-ZJw" id="hK5-A8-XzD"/>
+                        <outlet property="username" destination="fsm-27-vef" id="yRd-Aq-mW3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KFS-Uq-tpC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5712.8000000000002" y="-934.18290854572717"/>
+            <point key="canvasLocation" x="6652" y="-922.48875562218893"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginVC" customModule="Herbalife" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginVC" customModule="Smartlife" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Food.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="XCa-QY-DME">
@@ -268,8 +303,7 @@
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="back:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0wf-fc-EhK"/>
-                                            <segue destination="Bft-dl-5ew" kind="show" id="njW-fc-6Kk"/>
+                                            <segue destination="DDu-4S-JCj" kind="show" id="Fct-hr-QH7"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -288,7 +322,7 @@
                         <outlet property="email" destination="XS2-Ht-Jbw" id="Rp8-xP-eDz"/>
                         <outlet property="password" destination="wNP-Mo-Tse" id="2SS-jo-Auj"/>
                         <outlet property="signIn" destination="NEF-VC-leP" id="iHC-2o-FsK"/>
-                        <outlet property="signUp" destination="G0U-YE-smB" id="rlE-qG-7qp"/>
+                        <outlet property="signUp" destination="G0U-YE-smB" id="NE0-rD-o32"/>
                         <segue destination="Ov6-NL-gGU" kind="show" identifier="Home" id="4xO-3a-ecD"/>
                     </connections>
                 </viewController>
@@ -299,9 +333,9 @@
         <!--HomeVC-->
         <scene sceneID="5bf-Fy-mKe">
             <objects>
-                <viewController id="U9M-zf-uRJ" customClass="HomeVC" customModule="Herbalife" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="U9M-zf-uRJ" customClass="HomeVC" customModule="Smartlife" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9GL-o0-nNg">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HomePhoto.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wa7-CC-XKZ">
@@ -332,24 +366,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3jk-4p-Plq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4360.8000000000002" y="89.505247376311857"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="8Pe-Mp-lgm">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bft-dl-5ew" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="42B-Qt-yxT">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="VcC-bR-0Fn" kind="relationship" relationship="rootViewController" id="2Mb-rM-LIx"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sJk-dw-jdM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1959" y="-922"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="R53-jU-h7j">
@@ -390,9 +406,9 @@
         <!--Side MenuVC-->
         <scene sceneID="eOd-BP-8Jx">
             <objects>
-                <viewController storyboardIdentifier="Menu" id="hTq-bD-uwv" customClass="SideMenuVC" customModule="Herbalife" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Menu" id="hTq-bD-uwv" customClass="SideMenuVC" customModule="Smartlife" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8rF-qK-NWU">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NFk-Ct-WhP">
@@ -482,7 +498,7 @@
             <objects>
                 <viewController id="lDQ-Wz-VhK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z6n-Az-hCa">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="kFx-ws-Nfk"/>
@@ -496,9 +512,9 @@
         <!--ConfigurationVC-->
         <scene sceneID="CXK-Bq-Bhj">
             <objects>
-                <viewController id="ccb-gm-NVV" customClass="ConfigurationVC" customModule="Herbalife" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ccb-gm-NVV" customClass="ConfigurationVC" customModule="Smartlife" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AsY-rM-Seb">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fruits.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="crR-xZ-fX5">
@@ -618,7 +634,7 @@
             <objects>
                 <viewController id="V7b-2i-J6Q" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AYK-IC-NzG">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="nombre distribuidor" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2hD-4J-WvQ">
@@ -695,7 +711,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gLp-ft-XfA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4773.6000000000004" y="-934.18290854572717"/>
+            <point key="canvasLocation" x="5713" y="-922"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bv8-zv-sgD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DDu-4S-JCj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Thk-2q-dLx">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VcC-bR-0Fn" kind="relationship" relationship="rootViewController" id="IBj-57-IoF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NUF-FC-Jrw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3332" y="-922.48875562218893"/>
         </scene>
     </scenes>
     <resources>
@@ -707,7 +741,7 @@
         <image name="fruits.jpg" width="772" height="1160"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uX4-LI-D2U"/>
-        <segue reference="Zxl-ji-jrI"/>
+        <segue reference="4xO-3a-ecD"/>
+        <segue reference="DzN-kQ-BGt"/>
     </inferredMetricsTieBreakers>
 </document>

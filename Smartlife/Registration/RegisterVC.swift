@@ -16,8 +16,9 @@ class RegisterVC: UIViewController {
     @IBOutlet var email: UITextField!
     @IBOutlet var password1: UITextField!
     @IBOutlet var password2: UITextField!
+
     @IBOutlet var signUp: UIButton!
-    @IBOutlet var signIn: UIButton!
+    
     
     func alert(titleParam : String, messageParam: String) {
         let title = titleParam
@@ -45,7 +46,12 @@ class RegisterVC: UIViewController {
                         self.alert(titleParam: title, messageParam : (error?.localizedDescription)!)
                     }
                     else {
-                            Auth.auth().currentUser?.sendEmailVerification { (error) in
+                        // Todo OK; seguir continueRegistration
+                        // luego enviar mensaje de autentificacion
+                        
+                         self.performSegue(withIdentifier: "continueRegistration", sender: self)
+                        
+                            /*Auth.auth().currentUser?.sendEmailVerification { (error) in
                                 if error != nil {
                                     let title = "Welcome to Herbalife App"
                                     self.alert(titleParam: title, messageParam : (error?.localizedDescription)!)
@@ -62,7 +68,7 @@ class RegisterVC: UIViewController {
                                         }
                                     }
                                 }
-                            }
+                            }*/
                         
                     }
                 })
@@ -94,12 +100,6 @@ class RegisterVC: UIViewController {
         
         self.signUp.layer.borderWidth = 3.0
         self.signUp.layer.borderColor = UIColor.black.cgColor
-
-        
-        self.signIn.layer.borderWidth = 3.0
-        let color : UIColor = UIColor(red:0.21, green:0.49, blue:0.17, alpha:1.0)
-        self.signIn.layer.borderColor =  color.cgColor
-    
 
         self.email.leftViewMode = UITextFieldViewMode.always
         self.password1.leftViewMode = UITextFieldViewMode.always
