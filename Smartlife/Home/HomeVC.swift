@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import Firebase
 
 class HomeVC: UIViewController {
+    
+    @IBOutlet var profile_Pic: UIImageView!
+    @IBOutlet var username: UILabel!
     
     var menu_vc : SideMenuVC!
     @IBOutlet var menu_bt: UIBarButtonItem!
@@ -25,6 +29,34 @@ class HomeVC: UIViewController {
         }
     }
     
+    func retrieveUserInfo() {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        
+        let ref = Database.database().reference(withPath: "User Info/\(uid)/")
+        ref.observeSingleEvent(of: .value, with: { snapshot in
+            if !snapshot.exists() { return }
+            
+            let user = snapshot.childSnapshot(forPath: "Username").value
+            self.username.text = user as! String
+        })
+        
+        
+        let photo =  Storage.storage().reference().child("profile_image_urls").child("\(uid).png")
+        
+        photo.getData(maxSize: 1 * 1024 * 1024) { data, error in
+            if let error = error {
+                print(error)
+            } else {
+
+                let image = UIImage(data: data!)
+                self.profile_Pic.image = image
+                self.profile_Pic.contentMode = .scaleAspectFit
+            }
+        }
+        
+        
+
+    }
     
     @objc func respondToGesture(gesture: UISwipeGestureRecognizer) {
         switch gesture.direction {
@@ -47,6 +79,12 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        retrieveUserInfo()
+        
+        self.profile_Pic.layer.borderColor =  UIColor.black.cgColor
+        self.profile_Pic.layer.borderWidth = 2
+        
         menu_vc = self.storyboard?.instantiateViewController(withIdentifier: "Menu") as! SideMenuVC
         
         let swipeRight = UISwipeGestureRecognizer(target: self, action:#selector(self.respondToGesture))
