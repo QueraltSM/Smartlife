@@ -8,9 +8,11 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 class ContinueRegistrationVC: UIViewController,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
+    @IBOutlet var typeOfUserPicker: UISegmentedControl!
     let imagePicker = UIImagePickerController()
     @IBOutlet var profilePic: UIImageView!
     @IBOutlet var username: UITextField!
@@ -117,7 +119,22 @@ class ContinueRegistrationVC: UIViewController,UIImagePickerControllerDelegate, 
     }
     
     
+    
     func saveUserInfo() {
+        
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        var typeofuser = ""
+        
+        if(typeOfUserPicker.selectedSegmentIndex == 0) {
+             typeofuser = "Distributor"
+        } else if(typeOfUserPicker.selectedSegmentIndex == 1) {
+             typeofuser = "Client"
+        }
+        
+        let ref = Database.database().reference()
+    
+        ref.child("User Info/\(uid)/Username").setValue(username.text)
+        ref.child("User Info/\(uid)/Type of user").setValue(typeofuser)
     }
     
     @IBAction func saveInfo(_ sender: Any) {

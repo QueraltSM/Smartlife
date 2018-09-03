@@ -195,6 +195,8 @@ class ConfigurationVC: UIViewController,UIImagePickerControllerDelegate, UINavig
     
     
     @IBAction func deleteAccount(_ sender: Any) {
+        // Also must delete user's info on the Storage Firebase
+        
         let alertController = UIAlertController(title: "Are you sure you want to delete your account?", message: "", preferredStyle: .alert)
         let yes = UIAlertAction(title: "Yes", style: UIAlertActionStyle.default) {
             UIAlertAction in

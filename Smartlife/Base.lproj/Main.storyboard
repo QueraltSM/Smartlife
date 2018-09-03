@@ -205,6 +205,7 @@
                     <navigationItem key="navigationItem" id="Q89-4b-yKQ"/>
                     <connections>
                         <outlet property="profilePic" destination="Hr0-aV-ZJw" id="hK5-A8-XzD"/>
+                        <outlet property="typeOfUserPicker" destination="obT-F7-gM4" id="JWe-ep-OOr"/>
                         <outlet property="username" destination="fsm-27-vef" id="yRd-Aq-mW3"/>
                     </connections>
                 </viewController>
